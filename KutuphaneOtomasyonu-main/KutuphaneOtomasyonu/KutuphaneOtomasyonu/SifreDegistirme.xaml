@@ -1,0 +1,45 @@
+﻿<Window x:Class="KutuphaneOtomasyonu.SifreDegistirme"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:KutuphaneOtomasyonu"
+        mc:Ignorable="d"
+        Title="SifreDegistirme" Height="250" Width="600" WindowStartupLocation="CenterScreen" WindowStyle="None" AllowsTransparency="True">
+    <Grid >
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="90*"/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0" Background="#192028">
+
+            <DockPanel HorizontalAlignment="Right">
+                <Button Content="x" Width="35" Height="30" BorderThickness="0,0,0,0" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="18" Foreground="White" Background="Transparent" Click="Button_Click"/>
+            </DockPanel>
+           
+                 
+           
+        </Grid>
+
+        <Grid Grid.Row="1" Background="#252F3B">
+
+            <Border VerticalAlignment="Center" HorizontalAlignment="Center">
+
+                <StackPanel>
+                    <TextBox x:Name="MailGonder1_txt" Text="Mailinizi Giriniz..." Width="300" Height="35" TextAlignment="Center" Foreground= "White"  IsKeyboardFocusedChanged="MailGonder_txt" VerticalContentAlignment="Center" Background="Transparent" BorderThickness="3"/>
+                    <Button Click="MailGonder_Click" Content="Mail Gönder" Width="100" Height="50" Margin="10" Background="Transparent" Foreground="White" FontSize="15" BorderThickness="0,0,0,0"/>
+                    <Label x:Name="MailGonder_lbl" Content="Mailiniz Kayıtlı Olan Kullanıcı Mailinizle Uyuşmaktadır." Foreground="White"/>
+                </StackPanel>
+
+            </Border>
+
+
+
+
+
+        </Grid>
+        
+    </Grid>
+</Window>

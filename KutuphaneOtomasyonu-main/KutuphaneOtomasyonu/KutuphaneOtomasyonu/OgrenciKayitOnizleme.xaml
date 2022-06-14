@@ -1,0 +1,160 @@
+﻿<Window x:Class="KutuphaneOtomasyonu.OgrenciKayitOnizleme"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:KutuphaneOtomasyonu"
+        mc:Ignorable="d"
+        Title="OgrenciKayitOnizleme" Height="562" Width="800" WindowStartupLocation="CenterScreen" WindowStyle="None" Loaded="OgrenciKayitOnizleme_load">
+    <Grid>
+
+        <Grid.RowDefinitions>
+
+            <RowDefinition Height="90*"/>
+            <RowDefinition Height="10*"/>
+
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0">
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <Grid Grid.Column="0">
+
+                <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10,0,0,0">
+
+                    <DockPanel>
+
+                        <Label Content="Öğrenci Adı:" VerticalContentAlignment="Center" Background="#1F2832" Foreground="White" Width="150" Height="30" Margin="10">
+                            <Label.Effect>
+                                <DropShadowEffect Direction="221" RenderingBias="Quality"/>
+                            </Label.Effect>
+                        </Label>
+
+                        <TextBox x:Name="Adi_txt1" BorderThickness="3" Height="30" Width="200" VerticalContentAlignment="Center"/>
+
+                    </DockPanel>
+
+                    <DockPanel>
+
+                        <Label Content="Öğrenci Soyadı:" VerticalContentAlignment="Center" Background="#1F2832" Foreground="White" Width="150" Height="30" Margin="10">
+                            <Label.Effect>
+                                <DropShadowEffect Direction="221" RenderingBias="Quality"/>
+                            </Label.Effect>
+                        </Label>
+
+                        <TextBox x:Name="Soyadi_txt2" BorderThickness="3" Height="30" Width="200" VerticalContentAlignment="Center"/>
+
+                    </DockPanel>
+
+                    <DockPanel>
+
+                        <Label Content="Eğtim Aldığı Bölüm:" VerticalContentAlignment="Center" Background="#1F2832" Foreground="White" Width="150" Height="30" Margin="10">
+                            <Label.Effect>
+                                <DropShadowEffect Direction="221" RenderingBias="Quality"/>
+                            </Label.Effect>
+                        </Label>
+
+                        <ComboBox x:Name="Bolum_cmb" Height="30" VerticalContentAlignment="Center">
+
+                            <ComboBoxItem IsSelected="True">Seçiniz</ComboBoxItem>
+                            <ComboBoxItem Content="Yönetim Bilişim Sistemleri"/>
+                            <ComboBoxItem Content="İşletme"/>
+                            <ComboBoxItem Content="Uluslararası Ticaret ve İşletmecilik"/>
+                            <ComboBoxItem Content="Çocuk Gelişimi Programı"/>
+                            <ComboBoxItem Content="Dış Ticaret Programı"/>
+                            <ComboBoxItem Content="Elektrik Programı"/>
+                            <ComboBoxItem Content="İnşaat Teknolojisi Programı"/>
+                            <ComboBoxItem Content="Makine Programı"/>
+                            <ComboBoxItem Content="Mobilya ve Dekorasyon Programı"/>
+                            <ComboBoxItem Content="Muhasebe ve Vergi Uygulamaları Programı"/>
+                            <ComboBoxItem Content="Pazarlama Programı"/>
+                            <ComboBoxItem Content="İç Mekan Tasarımı Programı"/>
+                            <ComboBoxItem Content="Tekstil Teknolojisi Programı"/>
+                            <ComboBoxItem Content="İlk ve Acil Yardım Programı"/>
+                            <ComboBoxItem Content="İşletme Yönetimi Programı"/>
+                            <ComboBoxItem Content="Yaşlı Bakım Programı Programı"/>
+                            <ComboBoxItem Content="Sosyal Hizmetler Programı"/>
+                            <ComboBoxItem Content="Engelli Bakımı ve Rehabilitasyon Programı"/>
+
+
+
+                        </ComboBox>
+
+                    </DockPanel>
+
+                </StackPanel>
+
+            </Grid>
+
+            <Grid Grid.Column="1">
+
+                <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,10,0">
+
+                    <DockPanel>
+
+                        <Label Content="Telefon Numarası:" VerticalContentAlignment="Center" Background="#1F2832" Foreground="White" Width="150" Height="30" Margin="10">
+                            <Label.Effect>
+                                <DropShadowEffect Direction="221" RenderingBias="Quality"/>
+                            </Label.Effect>
+                        </Label>
+
+                        <TextBox x:Name="TelNo_txt4" BorderThickness="3" Height="30" Width="200" VerticalContentAlignment="Center"/>
+
+                    </DockPanel>
+
+                    <DockPanel>
+
+                        <Label Content="E-Posta Adresi:" VerticalContentAlignment="Center" Background="#1F2832" Foreground="White" Width="150" Height="30" Margin="10">
+                            <Label.Effect>
+                                <DropShadowEffect Direction="221" RenderingBias="Quality"/>
+                            </Label.Effect>
+                        </Label>
+
+                        <TextBox x:Name="E_Posta_txt5" BorderThickness="3" Height="30" Width="200" VerticalContentAlignment="Center"/>
+
+                    </DockPanel>
+
+                    <DockPanel>
+
+                        <Label Content="Okul Numarası:" VerticalContentAlignment="Center" Background="#1F2832" Foreground="White" Width="150" Height="30" Margin="10">
+                            <Label.Effect>
+                                <DropShadowEffect Direction="221" RenderingBias="Quality"/>
+                            </Label.Effect>
+                        </Label>
+
+                        <TextBox x:Name="OkulNo_txt6" BorderThickness="3" Height="30" Width="200" VerticalContentAlignment="Center"/>
+
+                    </DockPanel>
+
+                </StackPanel>
+
+            </Grid>
+
+        </Grid>
+
+        <Grid Grid.Row="1">
+
+            <DockPanel HorizontalAlignment="Right">
+
+                <Button Content="Üye Ekle" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Width="100" Height="30" Margin="10" Background="#1F2832" Foreground="White" Click="OgrenciOnizleme_UyeEkle_Click">
+                    <Button.Effect>
+                        <DropShadowEffect Direction="221" RenderingBias="Quality"/>
+                    </Button.Effect>
+                </Button>
+
+                <Button Content="İptal" Width="100" Height="30" Margin="10" Background="#1F2832" Foreground="White" Click="OgrenciKayitOnizleme_Iptal_Click">
+                    <Button.Effect>
+                        <DropShadowEffect Direction="221" RenderingBias="Quality"/>
+                    </Button.Effect>
+                </Button>
+                
+            </DockPanel>
+
+        </Grid>
+
+    </Grid>
+</Window>

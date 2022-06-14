@@ -1,0 +1,88 @@
+﻿<Window x:Class="KutuphaneOtomasyonu.KaydolEkranı"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:KutuphaneOtomasyonu"
+        mc:Ignorable="d"
+        Title="KaydolEkranı" Height="500" Width="800" WindowStartupLocation="CenterScreen" WindowStyle="None">
+    <Grid>
+               
+        <Grid.RowDefinitions>
+            
+            <RowDefinition Height="7*"/>
+            <RowDefinition Height="93*"/>
+            
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0" Background="#192028">
+            
+            <Viewbox HorizontalAlignment="Right">
+                
+                   <Button Click="Kpt_Click" BorderThickness="0,0,0,0" Background="Transparent" Content="x" Foreground="White" FontSize="16" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Width="35" Height="35"/>
+                
+            </Viewbox>
+            
+        </Grid>
+
+        <Grid Grid.Row="1" Background="#252F3B">
+            
+            <StackPanel>
+                
+                <DockPanel VerticalAlignment="Center" HorizontalAlignment="Center" Margin="10">
+                    
+                    <Label Content="Kullanıcı Adı:" Foreground="White" FontSize="15" Width="150"/>
+                    <TextBox  x:Name="KullaniciAdi_txt1"   Width="180" Background="Transparent" BorderThickness="3" Foreground="White" VerticalContentAlignment="Center"/>
+
+                </DockPanel>
+
+                <DockPanel VerticalAlignment="Center" HorizontalAlignment="Center" Margin="10">
+
+                    <Label Content="Kullanıcı Soyadı:" Foreground="White" FontSize="15" Width="150"/>
+                    <TextBox x:Name="KullaniciSoyadi_txt2" Width="180" Background="Transparent" BorderThickness="3" Foreground="White" VerticalContentAlignment="Center"/>
+
+                </DockPanel>
+
+                <DockPanel VerticalAlignment="Center" HorizontalAlignment="Center" Margin="10">
+
+                    <Label Content="Kullanıcı Mail Adresi:" Foreground="White" FontSize="15" Width="150"/>
+                    <TextBox  x:Name="KullaniciMail_txt3" Width="180" Background="Transparent" BorderThickness="3" Foreground="White" VerticalContentAlignment="Center"/>
+
+                </DockPanel>
+
+                <DockPanel VerticalAlignment="Center" HorizontalAlignment="Center" Margin="10">
+
+                    <Label Content="Kullanıcı Şifresi:" Foreground="White" FontSize="15" Width="150"/>
+                    <TextBox x:Name="KullaniciSifresi_txt4" Width="180" Background="Transparent" BorderThickness="3" Foreground="White" VerticalContentAlignment="Center"/>
+
+                </DockPanel>
+
+                <DockPanel VerticalAlignment="Center" HorizontalAlignment="Center" Margin="10">
+
+                    <Label Content="Şifreyi tekrar giriniz:" Foreground="White" FontSize="15" Width="150"/>
+                    <TextBox x:Name="KullaniciSifresi2_txt4" Width="180" Background="Transparent" BorderThickness="3" Foreground="White" VerticalContentAlignment="Center"/>
+
+                </DockPanel>
+
+                <DockPanel VerticalAlignment="Center" HorizontalAlignment="Center" Margin="10">
+
+                    <Label HorizontalContentAlignment="Right" Content="Okulu Seçiniz:" Foreground="White" FontSize="15" Width="140"/>
+                    <RadioButton x:Name="InglIsltm_Btn" VerticalAlignment="Center"/>
+                    <Label Content="İnegöl İşletme fakültesi" FontSize="15" Foreground="White" Width="170"/>
+                    <RadioButton x:Name="InglMslk_Btn" VerticalAlignment="Center" />
+                    <Label Content="İnegöl Meslek Yüksekokulu" Foreground="White" FontSize="15" Width="200"/>
+                                                         
+                </DockPanel>
+
+                <DockPanel>
+
+                    <Button Click="Kaydol_Cilick" Content="Kaydol" Width="150" Height="30" Foreground="White" Background="Transparent" FontSize="15" BorderThickness="3"/>
+
+                </DockPanel>
+
+            </StackPanel>
+            
+        </Grid>
+        
+    </Grid>
+</Window>
